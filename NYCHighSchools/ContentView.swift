@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.schools) { school in
+            List(viewModel.schools, id: \.dbn) { school in
                 NavigationLink(destination: SchoolDetailView(school: school)) {
                     Text(school.school_name)
                 }
@@ -35,7 +35,6 @@ struct SchoolDetailView: View {
         }
         .navigationBarTitle(school.school_name)
     }
-    
 }
 
 #Preview {

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct School: Decodable, Identifiable {
-    let id: String
+struct School: Codable {
+    let dbn: String
     let school_name: String
     let overview_paragraph: String
 }
